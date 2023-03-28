@@ -1,0 +1,129 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body, .calc-container{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.calc-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+}
+
+.calc{
+    background-color: cadetblue;
+    width: 30%;
+    height: 80%;
+    padding: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 1rem;
+    border: 2px solid black;
+    gap: 10px;
+}
+
+.screen-container{
+    width: 100%;
+    height: 15%;
+    background-color: teal;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: end;
+    border: 2px solid black;
+}
+
+.screen-result{
+    color: darkgray;
+    font-size: large;
+    margin: 2px;
+}
+
+.screen-op{
+    color: white;
+    font-size: 50px;
+    margin: 2px;
+}
+
+.btns-container{
+    height: 100%;
+    width: 100%;
+    background-color: slategrey;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    border: 2px solid black;
+    
+}
+
+.clear-btns{    
+    display: flex;
+    flex-grow: 1;
+    align-self: stretch;
+}
+
+.clear-btn{
+    background-color: aquamarine;
+}
+
+.del-btn{
+    background-color: rgb(240, 104, 104);
+}
+
+button{
+    flex-grow: 1;
+    margin: 5px;
+    border: 2px solid black;
+    font-size: xx-large;
+}
+
+
+
+.row{
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 5;
+    align-self: stretch;
+}
+
+.op-btns{
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+
+}
+
+.op-btn{
+    background-color: rgb(236, 157, 100);
+}
+
+.num-btns{
+    flex-grow: 3;
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+.num-btn{
+    background-color: burlywood;
+}
+
+.eq-btn{
+    background-color: yellow;
+}
+
+.btns-row{
+    display: flex;
+    flex-grow: 1;
+
+}
