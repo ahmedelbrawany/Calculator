@@ -84,6 +84,7 @@ button{
     flex-grow: 1;
     margin: 5px;
     border: 2px solid black;
+    border-radius: 1rem;
     font-size: xx-large;
 }
 
