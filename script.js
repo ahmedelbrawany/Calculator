@@ -5,16 +5,29 @@ const add = () => op1 + op2;
 
 function calculate() {
     switch (operator) {
-        case '/': return divide();
-        case 'x': return multiply();
-        case '-': return subtract();
-        case '+': return add();
+        case '/': return round(divide(), 2);
+        case 'x': return round(multiply(),2);
+        case '-': return round(subtract(),2);
+        case '+': return round(add(),2);
     }
+}
+
+function round(value, places){
+    let valStr = `${value}`
+    if(valStr.includes(".")){
+        let dotIndex = valStr.indexOf(".");
+        if(valStr[dotIndex+places+1]>=5 && valStr[dotIndex+places] !=9){
+            valStr = valStr.slice(0, dotIndex+places) +`${parseInt(valStr[dotIndex+places])+1}`;
+        }
+        valStr = valStr.slice(0,dotIndex+1+places);
+        return parseFloat(valStr);
+    }
+    return value;
 }
 
 function containsOneOperator() {
     let count = 0
-    if(op1<0){ count--;}
+    if(resultScreen.textContent[0]=="-"){ count--;}
     for (let i = 0; i < resultScreen.textContent.length; i++) {
         if ("+-/x=".includes(resultScreen.textContent[i])) {
             count++;
